@@ -26,3 +26,7 @@ user.props
 
 # Pyenv
 .python-version
+
+# DirEnv
+.envrc
+.env
