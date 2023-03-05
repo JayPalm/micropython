@@ -92,6 +92,7 @@ uint32_t trng_random_u32(void);
 #define MICROPY_PY_MACHINE_SPI              (1)
 #define MICROPY_PY_MACHINE_SOFTSPI          (1)
 #define MICROPY_PY_MACHINE_TIMER            (1)
+#define MICROPY_SOFT_TIMER_TICKS_MS         systick_ms
 #define MICROPY_PY_ONEWIRE                  (1)
 #define MICROPY_PY_UPLATFORM                (1)
 
@@ -116,6 +117,10 @@ uint32_t trng_random_u32(void);
 #define MICROPY_PY_LWIP_ENTER   MICROPY_PY_PENDSV_ENTER
 #define MICROPY_PY_LWIP_REENTER MICROPY_PY_PENDSV_REENTER
 #define MICROPY_PY_LWIP_EXIT    MICROPY_PY_PENDSV_EXIT
+
+#ifndef MICROPY_PY_NETWORK_HOSTNAME_DEFAULT
+#define MICROPY_PY_NETWORK_HOSTNAME_DEFAULT "mpy-mimxrt"
+#endif
 
 #endif
 
